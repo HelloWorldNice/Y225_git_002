@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--
+        通过bean标签去创建一个类的对象
+        HelloWorld helloWorld = new HelloWorld();
+        helloWorld.setName("Hello彭依凝");
+    -->
+
+    <!--
+    <bean id="helloWorld" class="cn.bdqn.HelloWorld">
+        <property name="name" value="段康家"/>
+    </bean>-->
+
+    <!-- 通过工厂提供的实例方法创建对象    -->
+    <!--
+    <bean id="userServiceImplFactory" class="cn.bdqn.UserServiceImplFactory"></bean>
+    <bean id="userService" factory-bean="userServiceImplFactory"
+                           factory-method="createUserService">
+    </bean>-->
+
+    <!-- 通过工厂提供的静态方法创建对象    -->
+    <!--
+    <bean id="userService"
+          class="cn.bdqn.UserServiceImplFactory"
+          factory-method="createUserService"></bean>-->
+
+    <!--
+    <bean id="catService" class="cn.bdqn.CatServiceImpl"
+                          init-method="init"
+                          destroy-method="destroy"
+    ></bean>-->
+
+    <!--
+    <bean id="user" class="cn.bdqn.User">
+        <constructor-arg index="0" type="java.lang.Integer" value="1"/>
+        <constructor-arg index="1" type="java.lang.String" value="段康家"/>
+        <constructor-arg index="2" type="java.lang.Double" value="30"/>
+    </bean>-->
+
+    <!--
+    <bean id="user" class="cn.bdqn.User">
+        <constructor-arg name="id" value="12"/>
+        <constructor-arg name="name" value="HelloWorld"/>
+        <constructor-arg name="weight" value="10"/>
+    </bean>-->
+
+    <bean id="user" class="cn.bdqn.User">
+        <constructor-arg name="birthday" ref="currentDate"/>
+    </bean>
+
+    <bean id="currentDate" class="java.util.Date"/>
+
+
+</beans>
