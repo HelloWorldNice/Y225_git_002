@@ -12,9 +12,9 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/account/")
-public class AccountController {
-	
+public class AccountController {	
 	// yyy
+	// xxx
     @Autowired
     private AccountService accountService;
 
