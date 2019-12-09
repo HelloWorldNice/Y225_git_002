@@ -17,6 +17,9 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+	//adfjklfjdkl
+	//adfjkldfjl
+	//dfajklfjdklfkjd
     @RequestMapping(value = "queryAll")
     public String queryAll(Model model){
         List<Account> accounts = accountService.queryAll();
