@@ -25,11 +25,16 @@ public class AccountController {
     }
 
 
-
+	// xxxx
+	// yyyy
+	// zzz
     @RequestMapping(value = "register")
     public String register(Account account){
         accountService.save(account);
 
         return "success";
     }
+
+
+
 }
